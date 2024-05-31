@@ -1,8 +1,22 @@
 .custom-size {
   aspect-ratio: 1/1;
-  width: 245px;
+  width: 175px;
+}
+
+.custom-icon {
+  width: 100px;
 }
 
 .custom-shadow {
   filter: drop-shadow(1px 1px 3px var(--bs-gray));
+}
+
+@media screen and (min-width: 1280px) {
+  .custom-size {
+    width: 245px;
+  }
+
+  .custom-icon {
+    width: 132px;
+  }
 }

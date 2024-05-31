@@ -5,7 +5,7 @@
 }
 
 .custom-title-fs-1 {
-  font-size: 4.35em;
+  font-size: 3.6em;
 }
 
 .custom-title-fs-2 {
@@ -13,7 +13,7 @@
 }
 
 .custom-title-fs-3 {
-  font-size: 1.75em;
+  font-size: 1.55em;
 }
 
 .custom-discount-fs {
@@ -48,4 +48,13 @@
   top: 50%;
   right: 0;
   transform: translateX(50%);
+}
+
+@media screen and (min-width: 1280px) {
+  .custom-title-fs-1 {
+    font-size: 4.35em;
+  }
+  .custom-title-fs-3 {
+    font-size: 1.75em;
+  }
 }

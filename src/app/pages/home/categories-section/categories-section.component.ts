@@ -34,7 +34,7 @@ export class CategoriesSectionComponent {
       title: 'DISEÑO UX/UI',
       content: 'Aquí es donde entra la UX (experiencia de usuario) y la UI (interfaz de usuario), que tienen la función de que el usuario encuentre lo que busca en el menor tiempo posible y además tenga una buena experiencia al visitar la web.',
       buttonLabel: 'Ver categoría',
-      backgroundImage: 'category_python',
+      backgroundImage: 'category_uxui',
       link: 'uxui',
     }
   ];

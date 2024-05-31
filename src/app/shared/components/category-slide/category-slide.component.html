@@ -1,13 +1,13 @@
-<div class="row justify-content-center align-content-center flex-column-reverse flex-lg-row">
+<div class="row w-100 justify-content-center align-content-center flex-column-reverse flex-lg-row">
   <div class="col-11 col-lg-6">
     <div class="d-flex flex-column justify-content-center align-content-center">
-      <div class="d-flex flex-row flex-lg-column justify-content-center justify-content-lg-start align-items-center">
+      <div class="d-flex flex-row flex-lg-column justify-content-center justify-content-lg-start align-items-center align-items-lg-start">
         <img class="custom-sparkle-size mb-3 me-3 me-lg-0 mt-4 mt-lg-0" src="assets/images/svg/sparkle.svg">
         <h3 class="fs-3 text-secondary mb-0 mb-lg-3 text-center text-lg-start"><b>{{title}}</b></h3>
       </div>
       <p class="fs-6 mb-5 text-center text-lg-start">{{content}}</p>
       <a class="text-decoration-none btn btn-primary px-5 py-2 mb-5 custom-width mx-auto mx-lg-0" [routerLink]="['/category/'+link]" >{{buttonLabel}}</a>
-      <div class="d-flex gap-1 mb-4 mb-lg-0 mx-auto mx-lg-0">
+      <div class="d-flex gap-1 mb-4 mb-xl-0 mx-auto mx-lg-0">
         <ng-container *ngFor="let marker of dotMarkers">
           <img *ngIf="!marker" class="custom-dot-size" src="assets/images/svg/dot_off.svg">
           <img *ngIf="marker" class="custom-dot-size" src="assets/images/svg/dot_on.svg">
@@ -15,8 +15,8 @@
       </div>
     </div>
   </div>
-  <div class="col-11 col-lg"></div>
-  <div class="col-11 col-lg-5 px-0">
+  <div class="col-11 col-xl d-none d-xl-flex"></div>
+  <div class="col-11 col-lg-6 col-xl-5 px-0">
     <img class="w-100 h-100 object-fit-cover" [src]="'assets/images/png/'+backgroundImage+'.png'">
   </div>
 </div>

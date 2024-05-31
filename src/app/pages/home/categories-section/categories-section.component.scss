@@ -6,8 +6,15 @@
   transform: translateX(-45%);
 }
 
+.custom-size{
+  width: 70px;
+}
+
 @media screen and (min-width: 1280px) {
   .custom-background {
     background: linear-gradient(to right, rgba(0,0,0,0.1), black);
+  }
+  .custom-size{
+    width: 100%;
   }
 }
