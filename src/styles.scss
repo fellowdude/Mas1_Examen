@@ -2,7 +2,7 @@
 $primary: #1A36A8;
 $secondary: #C12A21;
 $info: #DB0FA8;
-$dark: #2E2E2E;
+$dark: #78746f;
 $light: #FFFFFF;
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
@@ -14,7 +14,24 @@ $light: #FFFFFF;
   font-optical-sizing: auto;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bs-light);
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+}
+
 .ff-title {
   font-family: "Futura Std Medium", serif;
   font-optical-sizing: auto;
+}
+
+button:focus, input:focus {
+  box-shadow: none !important;
+  outline: none !important;
 }

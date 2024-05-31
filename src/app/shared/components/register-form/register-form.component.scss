@@ -1,0 +1,27 @@
+.custom-position {
+  top: 0;
+  right: 0;
+  transform: translate(10%, -35%);
+}
+
+.custom-text-color {
+  color: var(--bs-gray);
+}
+
+::ng-deep{
+  .selected-item{
+    color: var(--bs-primary) !important;
+    background: transparent !important;
+    border: none !important;
+    &:hover {
+      box-shadow: none !important;
+    }
+    span:after {
+      content: ',';
+    }
+    a {
+      display: none;
+    }
+  }
+}
+
