@@ -15,11 +15,11 @@
     <h3 class="fs-3 text-primary"><b>Galería</b></h3>
   </div>
   <div class="col-12 mb-3">
-    <div class="row h-100">
-      <div class="col h-100 d-flex justify-content-center align-items-center">
+    <div class="row h-100 flex-column flex-lg-row">
+      <div class="col h-100 d-none d-lg-flex justify-content-center align-items-center">
         <img class="cursor-pointer" src="assets/images/svg/arrow_blue.svg" (click)="prev()">
       </div>
-      <div class="col-8">
+      <div class="col-12 col-lg-8">
         <owl-carousel-o [options]="carouselOptions" #carousel>
           <ng-container *ngFor="let image of imageList; let i = index">
             <ng-template carouselSlide>
@@ -28,7 +28,8 @@
           </ng-container>
         </owl-carousel-o>
       </div>
-      <div class="col h-100 d-flex justify-content-center align-items-center">
+      <div class="col h-100 d-flex justify-content-center align-items-center gap-3">
+        <img class="d-block d-lg-none cursor-pointer" src="assets/images/svg/arrow_blue.svg" (click)="prev()">
         <img class="flip cursor-pointer" src="assets/images/svg/arrow_blue.svg" (click)="next()">
       </div>
     </div>
