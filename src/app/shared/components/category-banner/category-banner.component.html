@@ -1,1 +1,5 @@
-<p>category-banner works!</p>
+<div class="d-flex w-100 position-relative">
+  <img class="custom-size object-fit-cover" [src]="'assets/images/png/'+backgroundImage+'.png'">
+  <div class="position-absolute top-0 start-0 w-100 h-100 custom-background"></div>
+  <h1 class="text-light custom-fs custom-transform text-center position-absolute top-50 start-50 z-2"><b>{{title}}</b></h1>
+</div>

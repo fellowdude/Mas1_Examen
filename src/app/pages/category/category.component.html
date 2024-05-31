@@ -1,2 +1,37 @@
-<app-category-banner></app-category-banner>
-<p>category works!</p>
+<app-category-banner [title]="categoryBannerInformation.title" [backgroundImage]="categoryBannerInformation.backgroundImage"></app-category-banner>
+<section class="container row mx-auto mt-4">
+  <ng-container *ngFor="let description of descriptionList">
+    <div class="col-12 mb-3">
+      <h3 class="fs-3 text-primary"><b>{{description.title}}</b></h3>
+    </div>
+    <div class="col-12 mb-3">
+      <p class="fs-6 text-black" [innerHTML]="description.contentHTML"></p>
+    </div>
+  </ng-container>
+  <div class="col-12 mb-3">
+    <app-separator></app-separator>
+  </div>
+  <div class="col-12 mb-3">
+    <h3 class="fs-3 text-primary"><b>Galería</b></h3>
+  </div>
+  <div class="col-12 mb-3">
+    <div class="row h-100">
+      <div class="col h-100 d-flex justify-content-center align-items-center">
+        <img class="cursor-pointer" src="assets/images/svg/arrow_blue.svg" (click)="prev()">
+      </div>
+      <div class="col-8">
+        <owl-carousel-o [options]="carouselOptions" #carousel>
+          <ng-container *ngFor="let image of imageList; let i = index">
+            <ng-template carouselSlide>
+              <img class="custom-size object-fit-contain" [src]="'assets/images/png/'+image+'.png'">
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+      <div class="col h-100 d-flex justify-content-center align-items-center">
+        <img class="flip cursor-pointer" src="assets/images/svg/arrow_blue.svg" (click)="next()">
+      </div>
+    </div>
+  </div>
+</section>
+
