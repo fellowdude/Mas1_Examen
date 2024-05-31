@@ -6,3 +6,15 @@ $dark: #2E2E2E;
 $light: #FFFFFF;
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+* {
+  font-family: "Helvetica", serif;
+  font-optical-sizing: auto;
+}
+
+.ff-title {
+  font-family: "Futura Std Medium", serif;
+  font-optical-sizing: auto;
+}
