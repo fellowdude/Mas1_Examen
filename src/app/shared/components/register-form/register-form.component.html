@@ -4,19 +4,19 @@
   <form class="row" [formGroup]="registerForm">
     <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Nombre <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese sus nombres" formControlName="names">
+      <input class="form-control mt-1" placeholder="Ingrese sus nombres" formControlName="names" [ngClass]="{'border-danger': registerForm.get('names')?.invalid && registerForm.get('names')?.touched}">
     </div>
     <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Apellidos <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese sus apellidos" formControlName="lastnames">
+      <input class="form-control mt-1" placeholder="Ingrese sus apellidos" formControlName="lastnames" [ngClass]="{'border-danger': registerForm.get('lastnames')?.invalid && registerForm.get('lastnames')?.touched}">
     </div>
     <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Teléfono celular <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese su número telefonico" formControlName="phone">
+      <input class="form-control mt-1" placeholder="Ingrese su número telefonico" formControlName="phone" [ngClass]="{'border-danger': registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched}">
     </div>
     <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Correo electrónico <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese su correo electrónico" formControlName="email">
+      <input class="form-control mt-1" placeholder="Ingrese su correo electrónico" formControlName="email" [ngClass]="{'border-danger': registerForm.get('email')?.invalid && registerForm.get('email')?.touched}">
     </div>
     <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Tus favoritos</b></label>
@@ -25,6 +25,7 @@
         [settings]="dropdownSettings"
         [data]="favoriteList"
         formControlName="favorites"
+        [ngClass]="{'border-danger': registerForm.get('favorites')?.invalid && registerForm.get('favorites')?.touched}"
       >
       </ng-multiselect-dropdown>
     </div>
@@ -39,13 +40,13 @@
       </ngx-recaptcha2>
     </div>
     <div class="col-12 mb-2 d-flex">
-      <input class="form-check-input me-2" type="checkbox" formControlName="terms">
+      <input class="form-check-input me-2" type="checkbox" formControlName="terms" [ngClass]="{'border-danger': registerForm.get('terms')?.invalid && registerForm.get('terms')?.touched}">
       <label class="form-check-label">
         Acepto los <span class="text-primary"><b>Términos y políticas de privacidad</b></span>
       </label>
     </div>
     <div class="col-12 mb-2 d-flex">
-      <input class="form-check-input me-2" type="checkbox" formControlName="dataUse">
+      <input class="form-check-input me-2" type="checkbox" formControlName="dataUse" [ngClass]="{'border-danger': registerForm.get('dataUse')?.invalid && registerForm.get('dataUse')?.touched}">
       <label class="form-check-label">
         Acepto los <span class="text-primary"><b>Uso de datos personales</b></span>
       </label>

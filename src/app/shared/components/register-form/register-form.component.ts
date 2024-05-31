@@ -18,7 +18,7 @@ export class RegisterFormComponent {
     names: new FormControl(null, [Validators.required]),
     lastnames: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required]),
-    phone: new FormControl(null, [Validators.required]),
+    phone: new FormControl(null, [Validators.required, Validators.pattern(/^-?(0|[1-9]\d*)?$/)]),
     favorites: new FormControl(null),
     recaptcha: new FormControl(null, [Validators.required]),
     terms: new FormControl(false, [Validators.requiredTrue]),
