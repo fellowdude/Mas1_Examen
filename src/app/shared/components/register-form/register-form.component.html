@@ -1,54 +1,57 @@
 <div class="d-flex flex-column rounded-5 bg-light py-3 px-4 position-relative">
   <h3 class="fs-3 text-secondary mb-0"><b>Completa tus datos</b></h3>
   <img class="img-fluid w-50 mb-3" src="assets/images/svg/form_underline.svg">
-  <form class="row">
-    <div class="col-6 mb-3">
+  <form class="row" [formGroup]="registerForm">
+    <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Nombre <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese sus nombres">
+      <input class="form-control mt-1" placeholder="Ingrese sus nombres" formControlName="names">
     </div>
-    <div class="col-6 mb-3">
+    <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Apellidos <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese sus apellidos">
+      <input class="form-control mt-1" placeholder="Ingrese sus apellidos" formControlName="lastnames">
     </div>
-    <div class="col-6 mb-3">
+    <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Teléfono celular <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese su número telefonico">
+      <input class="form-control mt-1" placeholder="Ingrese su número telefonico" formControlName="phone">
     </div>
-    <div class="col-6 mb-3">
+    <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Correo electrónico <span class="text-secondary">*</span></b></label>
-      <input class="form-control mt-1" placeholder="Ingrese su correo electrónico">
+      <input class="form-control mt-1" placeholder="Ingrese su correo electrónico" formControlName="email">
     </div>
-    <div class="col-6 mb-3">
+    <div class="col-12 col-lg-6 mb-3">
       <label class="custom-text-color"><b>Tus favoritos</b></label>
       <ng-multiselect-dropdown
         [placeholder]="'Seleccione sus favoritos'"
         [settings]="dropdownSettings"
         [data]="favoriteList"
+        formControlName="favorites"
       >
       </ng-multiselect-dropdown>
     </div>
-    <div class="col-6 mb-3">
+    <div class="col-12 col-lg-6 mb-3">
       <ngx-recaptcha2
         [siteKey]="'6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'"
         [useGlobalDomain]="false"
         [size]="'compact'"
+        class="mx-auto"
+        formControlName="recaptcha"
       >
       </ngx-recaptcha2>
     </div>
-    <div class="col-12 mb-2">
-      <input class="form-check-input me-2" type="checkbox">
+    <div class="col-12 mb-2 d-flex">
+      <input class="form-check-input me-2" type="checkbox" formControlName="terms">
       <label class="form-check-label">
         Acepto los <span class="text-primary"><b>Términos y políticas de privacidad</b></span>
       </label>
     </div>
-    <div class="col-12 mb-2">
-      <input class="form-check-input me-2" type="checkbox">
+    <div class="col-12 mb-2 d-flex">
+      <input class="form-check-input me-2" type="checkbox" formControlName="dataUse">
       <label class="form-check-label">
         Acepto los <span class="text-primary"><b>Uso de datos personales</b></span>
       </label>
     </div>
-    <div class="col-12 d-flex justify-content-center align-content-center mb-4">
-      <button class="btn btn-primary px-5 py-3"><b>Registrarme</b></button>
+    <div class="col-12 d-flex justify-content-center align-content-center mb-4 mt-3">
+      <button class="btn btn-primary px-5 py-3" [disabled]="registerForm.invalid"><b>Registrarme</b></button>
     </div>
     <div class="col-12">
       <p class="fs-6 text-center px-1 custom-text-color mb-0">Aprovecha las mejores ofertas y descuentos en pollo, pavo, cerdo, congelados, embutidos <span class="text-secondary"><b>y mucho más.</b></span> No te pierdas de nada estos Cyberdays registrándote y obteniendo grandes descuentos exclusivos.</p>
