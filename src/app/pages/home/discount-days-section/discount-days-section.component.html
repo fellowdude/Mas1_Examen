@@ -2,10 +2,17 @@
   <div class="col-12">
     <app-separator></app-separator>
   </div>
-  <div class="col-12 mb-3">
+  <div class="col-12 mb-3 mx-auto">
     <app-title [titleText]="'¿Como obtengo el descuento por Cyber Days?'"></app-title>
   </div>
-  <div class="col-12 mb-3">
+  <div class="col-12 mb-3 mx-auto">
     <p class="text-dark fs-5 text-center">Para adquirir nuestro descuento especial por <span class="text-secondary"><b>Cyber Days</b></span> sigue los siguientes pasos</p>
+  </div>
+  <div class="col-12 mb-3 mx-auto">
+    <div class="row justify-content-center">
+      <div class="col-11 col-lg-4 mx-auto mb-4 mb-lg-0" *ngFor="let discountStep of discountStepList">
+        <app-discount-step [step]="discountStep.step" [icon]="discountStep.icon" [title]="discountStep.title" [content]="discountStep.content"></app-discount-step>
+      </div>
+    </div>
   </div>
 </section>

@@ -1,0 +1,13 @@
+.custom-translate-positive {
+  transform: translateX(-100%);
+}
+
+.custom-translate-negative {
+  transform: translateX(-45%);
+}
+
+@media screen and (min-width: 1280px) {
+  .custom-background {
+    background: linear-gradient(to right, rgba(0,0,0,0.1), black);
+  }
+}
